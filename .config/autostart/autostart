@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+
+## Kill if already running
+killall -9 xfsettingsd picom polybar mpd dunst ksuperkey xfce4-power-manager
+
+## Restore Wallpaper
+nitrogen --restore &
+
+## xfce4-settings daemon
+#xfsettingsd &
+
+## polkit agent
+#if [[ ! `pidof xfce-polkit` ]]; then
+#	/usr/lib/xfce-polkit/xfce-polkit &
+#fi
+lxsession &
+
+## Enable power management
+xfce4-power-manager &
+
+## Shortcuts
+pgrep -x sxhkd > /dev/null || sxhkd & 
+
+## Start Compositing Manager
+exec picom &
+
+## Launch Polybar
+sh ~/.config/polybar/launch.sh &
+
+## Notification Daemon
+exec dunst -c ~/.config/dunst/dunstrc &
+
+## Start Music Player Daemon
+exec mpd &
+
+## Launch Plank
+#exec plank &
+
+## Thunar Daemon
+#exec thunar --daemon &
+
+## Enable Super Keys For Menu
+ksuperkey -e 'Super_L=Alt_L|F1' &
+ksuperkey -e 'Super_R=Alt_L|F1' &
+ksuperkey -e 'Alt_L=Alt_L|F2'   &
+
+

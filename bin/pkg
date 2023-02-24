@@ -1,0 +1,45 @@
+#!/bin/bash
+icon_path="/usr/share/icons/custom/pkg.png"
+
+if (( $EUID != 0 )); then
+    echo " [!] Please run as root..."
+    exit
+fi
+
+arg="$1"
+
+if [ "$arg" == "" ]; then
+  echo -e " [!] Option required..."
+  echo -e " [+] Available options : "
+  echo -e "   1. install <pkg_name> -- to install the pkg"
+  echo -e "   2. update             -- to update repositories"
+  echo -e "   3. upgrade            -- upgrade the system"
+  echo -e "   4. remove <pkg_name>  -- to uninstall the given pkg"
+  exit
+fi
+
+
+if [ "$arg" == 'install' ]; then
+  pacman -S $2 --needed
+
+elif [ "$arg" == 'update' ]; then
+  pacman -Syy
+
+elif [ "$arg" == 'upgrade' ]; then
+  dunstify -i "$icon_path" "Package Manager" "Updating the system..."
+  pacman -Syyu
+
+
+
+elif [ "$arg" == 'remove' ]; then
+  pacman -Rsndc $2
+
+elif [ "$arg" == 'help' ]; then
+  echo -e " [+] Available options : "
+  echo -e "   1. install <pkg_name> -- to install the pkg"
+  echo -e "   2. update             -- to update repositories"
+  echo -e "   3. upgrade            -- upgrade the system"
+  echo -e "   4. remove <pkg_name>  -- to uninstall the given pkg"
+
+
+fi

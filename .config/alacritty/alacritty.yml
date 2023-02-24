@@ -1,0 +1,83 @@
+## Copyright (C) 2023-2023 Aditya Sharma <dxg4268>
+
+## Configuration for Alacritty, the GPU enhanced terminal emulator.
+## It's a very basic and simple config file, for full configuration...
+## See, /usr/share/doc/alacritty/example/alacritty.yml
+
+## Import files (Colors, Fonts, Etc)
+import:
+  - ~/.config/alacritty/fonts.yml
+
+## Set environment variables
+env:
+  TERM: alacritty
+  WINIT_X11_SCALE_FACTOR: "1.0"
+
+## Terminal window settings
+window:
+  dimensions:
+    columns: 100
+    lines: 24
+
+  padding:
+    x: 0
+    y: 0
+
+  decorations: full
+  startup_mode: Windowed
+  dynamic_title: true
+
+  ## scrolling
+  history: 10000
+  multiplier: 3
+
+  ## Background opacity
+  opacity: 1
+
+## Cursor
+cursor:
+  style:
+    shape: Beam
+    blinking: Always
+  vi_mode_style:
+    shape: Beam
+
+  unfocused_hollow: false
+
+## Live config reload
+live_config_reload: true
+
+## Shell
+#shell:
+#  program: /bin/zsh
+#  args:
+#    - --login
+## Colors configuration
+colors:
+  # Default colors
+  primary:
+    background: "#0A0E14"
+    foreground:
+      "#B3B1AD"
+
+      # Normal colors
+  normal:
+    black: "#0A0E14"
+    red: "#FF3333"
+    green: "#C2D94C"
+    yellow: "#FF8F40"
+    blue: "#59C2FF"
+    magenta: "#FFEE99"
+    cyan: "#95E6CB"
+    white: "#B3B1AD"
+
+  # Bright colors
+  bright:
+    black: "#4D5566"
+    red: "#FF3333"
+    green: "#C2D94C"
+    yellow: "#FF8F40"
+    blue: "#59C2FF"
+    magenta: "#FFEE99"
+    cyan: "#95E6CB"
+    white: "#B3B1AD"

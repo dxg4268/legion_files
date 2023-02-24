@@ -1,0 +1,158 @@
+Xft.antialias:	1
+Xft.hinting:	1
+Xft.autohint:	0
+Xft.hintstyle:	hintslight
+Xft.rgba:	rgb
+Xft.lcdfilter:	lcddefault
+Xft.dpi: 96
+
+! window padding
+st.borderpx: 20
+
+!-- values between 0.1  - 1.0 --! 
+
+st.alpha: 1.0 
+st.font:           JetBrainsMono Nerd Font:style:medium:pixelsize=20
+
+#define base00 #282c34
+#define base01 #353b45
+#define base02 #3e4451
+#define base03 #545862
+#define base04 #565c64
+#define base05 #abb2bf
+#define base06 #b6bdca
+#define base07 #c8ccd4
+#define base08 #e06c75
+#define base09 #d19a66
+#define base0A #e5c07b
+#define base0B #98c379
+#define base0C #56b6c2
+#define base0D #61afef
+#define base0E #c678dd
+#define base0F #be5046
+
+! #*foreground:   base07
+! #*background:   #001e222a
+! #*cursorColor:  base05
+
+! #*color0:       base00
+! #*color1:       base08
+! #*color2:       base0B
+! #*color3:       base0A
+! *color4:       base0D
+! *color5:       base0E
+! *color6:       base0C
+! *color7:       base05
+
+! *color8:       base03
+! *color9:       base08
+! *color10:      base0B
+! *color11:      base0A
+! *color12:      base0D
+! *color13:      base0E
+! *color14:      base0C
+! *color15:      base07
+
+! ! just remove this if you dont use my tabbed
+
+! tabbed.selfgcolor:   #d6d8eb
+! tabbed.selbgcolor:   #1e222a
+
+! tabbed.normfgcolor:  #9294a8
+! tabbed.normbgcolor:  #282c34
+
+! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+! Copyright (c) 2016-present Sven Greb <code@svengreb.de>
+
+! Project:    Nord XResources
+! Version:    0.1.0
+! Repository: https://github.com/arcticicestudio/nord-xresources
+! License:    MIT
+
+! #define nord0 #2E3440
+! #define nord1 #3B4252
+! #define nord2 #434C5E
+! #define nord3 #4C566A
+! #define nord4 #D8DEE9
+! #define nord5 #E5E9F0
+! #define nord6 #ECEFF4
+! #define nord7 #8FBCBB
+! #define nord8 #88C0D0
+! #define nord9 #81A1C1
+! #define nord10 #5E81AC
+! #define nord11 #BF616A
+! #define nord12 #D08770
+! #define nord13 #EBCB8B
+! #define nord14 #A3BE8C
+! #define nord15 #B48EAD
+!
+! *.foreground:   nord4
+! *.background:   nord0
+! *.cursorColor:  nord4
+! *fading: 35
+! *fadeColor: nord3
+!
+! *.color0: nord1
+! *.color1: nord11
+! *.color2: nord14
+! *.color3: nord13
+! *.color4: nord9
+! *.color5: nord15
+! *.color6: nord8
+! *.color7: nord5
+! *.color8: nord3
+! *.color9: nord11
+! *.color10: nord14
+! *.color11: nord13
+! *.color12: nord9
+! *.color13: nord15
+! *.color14: nord7
+! *.color15: nord6
+
+!! Ayu-Dark
+!
+! Generated with :
+! XRDB2Xreources.py
+!
+*.foreground:  #e6e1cf
+*.background:  #0a0e14
+*.cursorColor: #f29718
+!
+! Black
+*.color0:      #0a0e14
+*.color8:      #0a0e14
+!
+! Red
+*.color1:      #ff3333
+*.color9:      #ff3333
+!
+! Green
+*.color2:      #b8cc52
+*.color10:     #eafe84
+!
+! Yellow
+*.color3:      #e7c547
+*.color11:     #fff779
+!
+! Blue
+*.color4:      #36a3d9
+*.color12:     #68d5ff
+!
+! Magenta
+*.color5:      #f07178
+*.color13:     #ffa3aa
+!
+! Cyan
+*.color6:      #95e6cb
+*.color14:     #c7fffd
+!
+! White
+*.color7:      #b3b1ad
+*.color15:     #ffffff
+!
+! Bold, Italic, Underline
+*.colorBD:     #e6e1cf
+!*.colorIT:
+!*.colorUL:
+
+

@@ -1,0 +1,104 @@
+#!/bin/bash
+## Copyright (C) 2023-2023 Aditya Sharma <dxg4268>
+
+# colors
+red='\033[0;31m'
+yellow='\033[0;33m'
+green='\033[0;32m'
+blue='\033[0;34m'
+magenta='\033[0;35m'
+cyan='\033[0;36m'
+clear='\033[0m'
+
+
+date=$(date +"%T")
+user_host=$(whoami)@$(hostname)
+
+
+banner() {
+echo ""
+echo  "                           ▄▀█ █░░ █ █▄▀ █▀█ █▀▀ █▀▄" 
+echo  "                           █▀█ █▄▄ █ █░█ █▀▄ ██▄ █▄▀"
+echo "                                    made for LegionOS"
+echo ""
+
+echo -e " [${yellow}$user_host${clear}]                                                     [${green}$date${clear}]"
+echo -e "${magenta} ==============================================================================${clear}"
+
+}
+
+
+function kernel {
+  suffix=$1
+  selected_varient=$(sudo pacman -Ss linux-${suffix} | grep $suffix | cut -d "/" -f2 | cut -d " " -f1 | head -n 1)
+  echo ${selected_varient}
+}
+
+declare -a Varients=("MainStream" 
+                    "LTS" 
+                    "Zen" 
+                    "Hardened" 
+                    "Tkg-bmq" 
+                    "Tkg-pds" 
+                    "Tkg-cfs")
+
+declare -a list_varients=("" "lts" "zen" "hardened" "tkg-bmq" "tkg-pds" "tkg-cfs")
+
+clear
+banner
+echo
+sudo pacman -Syy
+clear
+banner
+echo 
+echo -e " ${cyan}[-] Current Kernel : $(uname -r)${clear}"
+echo ""
+echo -e " ${blue}[-] Linux-Kernel is the heart of any linux system.\n     Here are different kernels available for LegionOS...${clear}"
+echo ""
+# List different varients 
+declare -i i=1
+for varient in ${Varients[@]}; do
+  printf " ${cyan}${i}).${clear} $varient \n"
+  i=$(( i+1 ))
+done
+
+echo "" 
+printf " ${green}[?] Enter Linux Varient (1,2...7) : ${clear}"
+read choice
+
+declare -i idx=$(( choice-1 ))
+
+linux=${list_varients[idx]}
+  
+selected_varient="linux"
+#kernel ${linux}
+if [ ${idx} -ne 0 ]
+then
+  selected_varient=$(kernel "${linux}")
+fi
+
+dunstify -i /usr/share/icons/custom/backup.png "Timeshift" "Creating a System Backup before kernel installation..."
+
+sudo timeshift --create --comments "Pre-Kernel Install Backup"
+
+
+dunstify -i /usr/share/icons/custom/alikred.png "Alikred" "Installing new Kernel\n${selected_varient}"
+echo -e " ${yellow}[+] Installing selected varient... ${selected_varient}"
+
+success() {
+	dunstify -i /usr/share/icons/custom/alikred.png "Alikred" "Installed Successfully\n${selected_varient}"
+
+	sudo update-grub
+}
+
+fail() {
+	dunstify -i /usr/share/icons/custom/error.png "Alikred" "An error occurred...\n${selected_varient}"
+}
+
+
+sudo pacman -S --needed ${selected_varient} ${selected_varient}-headers && success || fail
+
+
+
+
+

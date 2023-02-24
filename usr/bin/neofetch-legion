@@ -1,0 +1,2 @@
+bspc rule -a Xfce4-terminal state=floating
+xfce4-terminal --geometry=70x20 -x "launch-neofetch.sh" --disable-server

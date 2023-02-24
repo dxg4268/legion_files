@@ -1,0 +1,3 @@
+#!/bin/sh
+killall dunst
+dunstify -i /usr/share/icons/custom/vol3.png " Volume " " $(pamixer --get-volume)% "

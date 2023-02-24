@@ -1,0 +1,4 @@
+bspc rule -a Xfce4-terminal state=floating
+xfce4-terminal --disable-server --title=SystemMonitor -e "zsh /usr/bin/chunchunmaru.sh ;read"
+bspc rule -a Xfce4-terminal state=tilling
+

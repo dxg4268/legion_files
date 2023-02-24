@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+TryExec=system-maintain
+Exec=system-maintain
+Icon=/usr/share/icons/custom/alikred.png
+Terminal=false
+Categories=System;
+
+Name=Legion System Maintainance
+GenericName=System Maintainance
+Comment=A TUI settings utility to maintain the system
+
+
+X-Desktop-File-Install-Version=0.26
+

@@ -1,0 +1,87 @@
+#!/bin/bash
+
+date=$(date +"%T")
+user_host=$(whoami)@$(hostname)
+
+
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+blue='\033[0;34m'
+magenta='\033[0;35m'
+cyan='\033[0;36m'
+NC='\033[0m'
+
+
+banner() {
+echo ""
+echo  "                           ▄▀█ █░░ █ █▄▀ █▀█ █▀▀ █▀▄" 
+echo  "                           █▀█ █▄▄ █ █░█ █▀▄ ██▄ █▄▀"
+echo "                                    made for LegionOS"
+echo ""
+
+echo -e " [${yellow}$user_host${NC}]                                                     [${green}$date${NC}]"
+echo -e " =============================================================================="
+
+}
+
+
+clear
+banner
+checkUpdates
+echo ""
+echo -e " ${cyan}[+] Updater Options:${NC}"
+echo
+echo -e " ${green}1)\033[0m Update the System, Silently..."
+echo -e " ${green}2)\033[0m Update the System, showing all process..."
+echo -e " ${green}3)\033[0m Return to main menu"
+echo
+
+
+printf " ${yellow}[?] Enter your choice: ${NC}"
+read choice
+
+case "$choice" in
+    1)
+        sudo pacman -Syy
+
+        icon_path="/usr/share/icons/custom/pkg.png"
+        echo " [+] Upgrading the system..."
+        dunstify -i "$icon_path" "Package Manager" "Updating the system..."
+        sudo pacman -Syyu --noconfirm > /dev/null
+        while true; do
+          upgrade_status=$(pacman -Qu)
+
+          if [ -z "$upgrade_status" ]; then
+            dunstify -i "$icon_path" "Package Manager" "System Upgraded"
+            break
+          fi
+
+          sleep 15
+        done
+        ;;
+    2)
+        icon_path="/usr/share/icons/custom/pkg.png"
+        echo " [+] Upgrading the system..."
+        dunstify -i "$icon_path" "Package Manager" "Updating the system..."
+        sudo pacman -Syyu > /dev/null
+        while true; do
+          upgrade_status=$(pacman -Qu)
+
+          if [ -z "$upgrade_status" ]; then
+            dunstify -i "$icon_path" "Package Manager" "System Upgraded"
+            break
+          fi
+
+          sleep 15
+        done
+
+        ;;
+    3)
+        exit
+        ;;
+    *)
+        echo "Invalid choice"
+        ;;
+esac
+

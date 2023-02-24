@@ -1,0 +1,103 @@
+#!/bin/bash
+## Copyright (C) 2023-2023 Aditya Sharma <dxg4268>
+
+
+# Colors
+red='\033[0;31m'
+green='\033[1;32m'
+yellow='\033[1;33m'
+blue='\033[1;34m'
+magenta='\033[35m'
+cyan='\033[36m'
+NC='\033[0m'
+
+# Get current date and time
+  date=$(date +"%T")
+
+  # Get username and hostname
+  user_host=$(whoami)@$(hostname)
+
+banner() {
+echo ""
+echo  "                           ▄▀█ █░░ █ █▄▀ █▀█ █▀▀ █▀▄" 
+echo  "                           █▀█ █▄▄ █ █░█ █▀▄ ██▄ █▄▀"
+echo "                                    made for LegionOS"
+echo ""
+
+echo -e " [${yellow}$user_host${NC}]                                                     [${green}$date${NC}]"
+echo -e " ${magenta}==============================================================================${NC}"
+
+}
+
+
+
+
+
+
+declare -a list_varients=("" "lts" "zen" "hardened" "tkg-bmq" "tkg-pds" "tkg-cfs")
+declare -a linux
+declare -a array
+
+switch_kernel() {
+    echo " [-] Switching to kernel $1..."
+    sleep 1
+    sudo update-grub 2&> /dev/null
+    echo -e " [-] Rebooting"
+    sudo grub-set-default 0
+    sudo grub-reboot $1
+    sudo reboot
+}
+
+
+
+for var in ${list_varients[@]}; 
+do
+  string=$(pacman -Q | grep linux | grep ${var})
+  if [[ $string!=" " ]]; then
+    string=$(echo $string | cut -d " " -f1)
+    linux+=($string)
+  fi
+done
+
+grab_kernel() {
+  str1=$(ls /usr/lib/modules)
+  array+=($str1)
+}
+
+grab_kernel
+
+
+declare -i i=1
+for varient in ${linux[@]};
+do
+  echo " ${i}). $varient"
+  i=$(( i+1 ))
+done
+
+
+#echo
+#printf " [+] Enter choice (1,2...) : "
+#read choice
+#declare -i idx=$(( choice-1 ))
+
+#echo ""
+#while true; do
+
+#read -p " [?] Do you want to proceed? (y/n) " yn
+
+#echo ""
+#case $yn in 
+#	[yY] )
+#    switch_kernel ${array[idx]}
+#		break;;
+#	[nN] ) echo " [-] Exiting...";
+#		exit;;
+#	* ) echo invalid response;;
+#esac
+#
+#done
+
+
+
+
+

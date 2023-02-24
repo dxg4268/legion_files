@@ -1,0 +1,94 @@
+#!/bin/bash
+## Copyright (C) 2023-2023 Aditya Sharma <dxg4268> 
+
+# Colors
+red='\033[0;31m'
+green='\033[1;32m'
+yellow='\033[1;33m'
+blue='\033[1;34m'
+magenta='\033[35m'
+cyan='\033[36m'
+NC='\033[0m'
+
+# Get current date and time
+  date=$(date +"%T")
+
+  # Get username and hostname
+  user_host=$(whoami)@$(hostname)
+
+banner() {
+echo ""
+echo  "                           ▄▀█ █░░ █ █▄▀ █▀█ █▀▀ █▀▄" 
+echo  "                           █▀█ █▄▄ █ █░█ █▀▄ ██▄ █▄▀"
+echo "                                    made for LegionOS"
+echo ""
+
+echo -e " [${yellow}$user_host${NC}]                                                     [${green}$date${NC}]"
+echo -e " ${magenta}==============================================================================${NC}"
+
+}
+
+while true
+do
+clear
+
+banner
+echo ""
+echo ""
+echo -e " ${cyan}[+] Please choose one of the following options: ${NC}"
+echo
+echo -e " ${green}1)${NC} WindowManager Settings                   ${green}6)\033[0m Wallpaper ﱦ"
+echo -e " ${green}2)${NC} Keyboard Shortcuts                       ${green}7)\033[0m System Maintainance "
+echo -e " ${green}3)${NC} Look and Feel                            ${green}8)\033[0m Kernel Installer "
+echo -e " ${green}4)${NC} Wi-Fi Settings                           ${green}9)\033[0m Create System Backup "
+echo -e " ${green}5)${NC} CCM System Monitor                       ${green}0)\033[0m Exit "
+
+
+echo
+echo
+printf " ${cyan}[?] Enter your choice: ${NC}"
+read choice
+
+case "$choice" in
+    1)
+        nvim $HOME/.config/bspwm/bspwmrc
+        ;;
+    2)
+        nvim $HOME/.config/sxhkd/sxhkdrc
+        ;;
+    5)
+        zsh /usr/bin/chunchunmaru.sh
+        ;;
+    4)
+        wifi
+        ;;
+    3)
+        lxappearance
+        ;;
+    6)
+        nitrogen
+        ;;
+    7)
+        system_maintain.sh
+        ;;
+    8)
+        k_manage.sh
+        ;;
+    9)
+        ts_backup
+        ;;
+    0)
+
+	      echo
+	      echo
+	      echo -e " [-] Thank You, Exiting..."
+	      sleep 1
+	      exit
+        ;;
+
+    *)
+        echo "Invalid choice"
+        ;;
+esac
+
+done

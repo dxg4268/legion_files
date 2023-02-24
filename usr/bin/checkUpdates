@@ -1,0 +1,22 @@
+#!/bin/bash
+## Copyright (C) Aditya Sharma <dxg4268>
+
+# Set the maximum number of updates to check for
+max_updates=100
+
+# Get the number of available updates
+num_updates=$(checkupdates | wc -l)
+icon_path="/usr/share/icons/custom/pkg.png"
+
+
+
+# Check if there are any updates available
+if [ $num_updates -gt 0 ] ; then
+  # Notify the user of the available updates
+  dunstify -i "${icon_path}" "Updates available" "There are $num_updates updates available. Run 'sudo pacman -Syu' to update."
+else
+  dunstify -i "${icon_path}" "Package Manager" "No Updates Available. System Up-to-date !"
+  echo " [!] No Updates Found !"
+  sleep 2
+fi
+

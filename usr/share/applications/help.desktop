@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+TryExec=legion_help
+Exec=legion_help
+Icon=/usr/share/icons/custom/alikred.png
+Terminal=false
+Categories=System;
+
+Name=Legion Help
+Comment=A guide for new users
+
+
+X-Desktop-File-Install-Version=0.26
+

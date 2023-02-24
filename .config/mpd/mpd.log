@@ -1,0 +1,14 @@
+Feb 13 22:05 : exception: Failed to open '/home/aditya/.mpd/mpdstate': No such file or directory
+Feb 13 22:05 : update: added /aot.mp3
+Feb 13 22:13 : exception: Failed to create /home/aditya/.mpd/mpdstate: No such file or directory
+Feb 14 06:36 : exception: Failed to open '/home/aditya/.config/mpd/mpdstate': No such file or directory
+Feb 14 06:39 : exception: Failed to open '/home/aditya/.config/mpd/mpdstate': No such file or directory
+Feb 14 06:40 : exception: Failed to open '/home/aditya/.config/mpd/mpdstate': No such file or directory
+Feb 14 06:42 : exception: Failed to open '/home/aditya/.config/mpd/mpdstate': No such file or directory
+Feb 14 06:45 : player: played "aot.mp3"
+Feb 14 06:52 : player: played "aot.mp3"
+Feb 14 06:57 : player: played "aot.mp3"
+Feb 14 07:00 : player: played "aot.mp3"
+Feb 14 07:01 : player: played "aot.mp3"
+Feb 14 23:14 : player: played "aot.mp3"
+Feb 17 21:59 : player: played "aot.mp3"

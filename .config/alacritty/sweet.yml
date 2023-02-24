@@ -1,0 +1,24 @@
+colors:
+  primary:
+    background: '0x191919'
+    text: '0xf1f1f1'
+  normal:
+    black: '0x191919'
+    red: '0xE45252'
+    green: '0x93c763'
+    yellow: '0xffcc66'
+    blue: '0x3ea3f2'
+    magenta: '0xff93f3'
+    cyan: '0x1f9b9b'
+    white: '0xf1f1f1'
+  bright:
+    black: '0x191919'
+    red: '0xff69b4'
+    green: '0x93c763'
+    yellow: '0xffcc66'
+    blue: '0x3ea3f2'
+    magenta: '0xff93f3'
+    cyan: '0x1f9b9b'
+    white: '0xf1f1f1'
+
+

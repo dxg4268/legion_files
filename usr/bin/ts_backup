@@ -1,0 +1,14 @@
+#!/bin/bash
+
+success() {
+  timeshift-notify.sh
+}
+
+fail() {
+  dunstify -i /usr/share/icons/custom/error.png "Timeshift" "An Error Occured..."
+}
+
+printf " [?] Enter a comment : "
+read comment
+sudo timeshift --create --comments "$comment" && success || fail
+

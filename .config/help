@@ -1,0 +1,91 @@
+## Copyright (C) 2023-2023 Aditya Sharma <dxg4268>
+
+
+ ▒█░░░ █▀▀ █▀▀▀ ░▀░ █▀▀█ █▀▀▄ ▒█▀▀▀█ ▒█▀▀▀█ 
+ ▒█░░░ █▀▀ █░▀█ ▀█▀ █░░█ █░░█ ▒█░░▒█ ░▀▀▀▄▄ 
+ ▒█▄▄█ ▀▀▀ ▀▀▀▀ ▀▀▀ ▀▀▀▀ ▀░░▀ ▒█▄▄▄█ ▒█▄▄▄█
+
+
+ [+] Welcome to LegionOS ! Yet another linux distribution based on Arch Linux
+ [+] In this file, you will get some help regarding how to work in this system
+
+
+
+ [-] Some keyhighlights
+
+    1. This distribution is optimized for best performance hence using the custom
+     patched Linux-Tkg-BMQ kernel.
+
+    2. It uses BTRfs modern CoW file system as default with ZSTD compression 
+     and mounted with optimization options.
+
+    3. Alikred - A system settings CLI-based application that helps to handle 
+     various system tasks with ease thus providing easy option for new linux users. 
+
+    4. LegionOS is built on top of Arch Linux which is a rolling release Linux 
+     Distribution and using the main stream repositories for packages only.
+
+    5. Chaotic-AUR repository enabled by default thus providing access access a large pool
+     of packages.
+  
+    6. A heavily customized BSPWM, a dynamic tilling window manager with blazing fast 
+     alacritty terminal.
+
+    7. Weekly scheduled System backups hence even if the system is corrupted, it can be 
+     rolled back to its initial stage.
+
+    8. Many custom built application come installed accessable using alikred
+
+    9. To be frank, Linux Mint was my daily driver about 3 years ago and to support the 
+     Ubuntu, Debian community a little, I have created a custom pkg script with similar syntax.
+
+
+
+ [-] Some Shortcuts to quickstart:
+    start + enter         == alacritty terminal
+    start                 == Favourite Apps
+    start + space         == All Apps   
+    alt   + space         == System Settings
+    start + r             == Run
+    start + space + n     == Wi-Fi settings
+    start + shift + q     == close current window
+    start + [             == previous workdspace
+    start + ]             == next workspace
+    start + shift + s     == Screenshot
+
+
+ [-] Some of the defualt Applications that are installed are:
+    1. Alikred                     (Legion Command Centre, A settings manager built from scratch)
+    2. Firefox and Tor-Browser
+    3. Alacritty Terminal Emulator
+    4. Nemo file manager
+    5. Neovim text editor and Neovide UI          (use 'nvim' and 'neovide' command to use it)
+    6. Leafpad Editor                             (if you are not comfortable with cli editor)
+    7. Nitrogen Wallpaper Setter
+    8. Alikred (CCM) System Monitor 
+    9. LXAppearance		                            (for Look and Feel)
+   10. Ncmpcpp Music Player                       (store music in $HOME/Music folder)
+
+
+ [-] System Applications and Native Apps
+    1. Legion Command Centre                      (alikred)
+    2. Legion System Monitor                      (ccm)
+    3. Legion System Maintainance                 (system-maintain)
+          
+    
+    Note : They are not GUI but TUI Applications as I was facing problems with 
+           providing GUI but I found TUI apps to be faster than them. I have a 
+           rofi menu which could act as a GUI frontend to alikred.
+
+
+          *but this is not all ;)
+
+
+ [-] Most of the configs are built on top of default configs but special thanks to:
+    Aditya Shakya           (for Rofi themes)
+    Artur Gomes             (for beautiful NVIM config)
+    Derek Taylor            (inspiration for ricing)
+    Arch Linux Community
+  
+
+

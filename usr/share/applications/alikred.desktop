@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+TryExec=alikred
+Exec=alikred
+Icon=/usr/share/icons/custom/alikred.png
+Terminal=false
+Categories=System;
+
+Name=Legion Command Centre
+GenericName=Settings Manager
+Comment=A settings manager built for LegionOS
+
+
+X-Desktop-File-Install-Version=0.26
+

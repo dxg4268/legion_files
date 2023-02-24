@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+TryExec=ccm
+Exec=ccm
+Icon=/usr/share/icons/custom/alikred.png
+Terminal=false
+Categories=System;
+
+Name=Legion Resource Monitor
+GenericName=System Monitor
+Comment=A system resources Monitor built for LegionOS
+X-Desktop-File-Install-Version=0.26
+

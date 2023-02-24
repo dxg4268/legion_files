@@ -1,0 +1,55 @@
+{
+    "Account": {
+        "access_token": "BQDcPed9nWzbmuL1LL6-6kb9g1uR-qd7tAw6sfFAYE52Chq5QepFZ7U4x1YB6RiVbpMhQ5BeLmNAdRAA4d7FtELZgeaKKvuJtmtuCWHFvUaaFDLHliNsM6hE96eYEaPgDgzNzPOl7oMYxo3mPB9E-XtL9BgJzjZ5Ew2mN5jf_AKDNsuW6mksZV44vNOcn-1Zv-ZRKzKST4myiZqbVBKQhOIQoyD3iosIBsDBFN8oy177UI9UxW47DTUGoaulkefWeZ8OH3cvbv1mtBO2H_pi0mM2UXwTUmRbmzwqtL5B3Rn3gtzLJWzET746VgTyWQ4ufkrp5ADjvwU2Tg",
+        "client_id": "03d9a8ac538e46eda6141389b7fb9280",
+        "client_secret": "1a18fba06f8f40fa9106f86ca9b5a8e9",
+        "last_refresh": 1676697519,
+        "refresh_token": "AQDMT_Sk8Eb1EaOfnpInB1HP6j4oSRIhoh8xk4gOXBFy-3TYjWLHgRrKbB7AtBtx8vP9doNPHczwJgZH30TmJ-FzDokeRsPtz6oYnJMgYxvPDGMkWDxuhmCYr6YRwO98KfE"
+    },
+    "General": {
+        "check_for_updates": true,
+        "close_to_tray": false,
+        "custom_playlist_order": [],
+        "fallback_icons": false,
+        "fixed_width_time": true,
+        "hidden_song_headers": [],
+        "last_device": "",
+        "last_playlist": "1PyafL3OIlgKjDlAGEXanB",
+        "last_version": "v3.9",
+        "last_volume": 20,
+        "media_controller": false,
+        "notify_track_change": false,
+        "playlist_order": 0,
+        "refresh_interval": 3,
+        "relative_added": true,
+        "show_changelog": true,
+        "song_header_sort_by": -1,
+        "style": "qt5ct-style",
+        "style_palette": 0,
+        "track_list_resize_mode": 0,
+        "track_numbers": 1,
+        "tray_album_art": false,
+        "tray_icon": true,
+        "tray_light_icon": false
+    },
+    "Qt": {
+        "album_size": 0,
+        "custom_font_name": "",
+        "custom_font_size": 0,
+        "mirror_title_bar": false,
+        "system_title_bar": false
+    },
+    "Spotify": {
+        "always_start": true,
+        "backend": "",
+        "bitrate": 320,
+        "device_type": 0,
+        "disable_discovery": false,
+        "global_config": false,
+        "keyring_password": false,
+        "max_queue": 500,
+        "path": "",
+        "start_client": false,
+        "username": ""
+    }
+}
